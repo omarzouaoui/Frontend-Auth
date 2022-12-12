@@ -2,12 +2,18 @@ import React from 'react'
 import "./Header.scss"
 import {BiLogIn} from "react-icons/bi";
 import {FaUserCircle} from "react-icons/fa";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 
 const activeLink = ({ isActive }) => ( isActive ? "active":"" );
 
 export const Header = () => {
+
+    const navigate = useNavigate();
+    const goHome = () => {
+        navigate("/")
+    };
+
   return (
     <header className='header'>
         <nav>

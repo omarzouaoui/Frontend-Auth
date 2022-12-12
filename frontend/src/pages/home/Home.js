@@ -8,7 +8,6 @@ import loginImg from "../../assets/login.svg"
 export const Home = () => {
   return (
     <div>
-        <Header/>
         <section className='container hero' >
           <div className='hero-text'>
             <h2>Authentication System</h2>
@@ -27,7 +26,6 @@ export const Home = () => {
             <img src={loginImg} alt="x"/>
           </div>
         </section>
-        <Footer/>
     </div>
   )
 }

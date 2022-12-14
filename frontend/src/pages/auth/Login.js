@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { BiLogIn } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 import { Card } from '../../components/card/Card'
 import styles from "./auth.module.scss"
 
@@ -39,20 +40,26 @@ export const Login = () => {
                 placeholder="Email" 
                 required name='email' 
                 value={email} 
-                onChange={handleInputChange}
+                // onChange={handleInputChange}
                 />
                 <input 
                 type="password" 
                 placeholder="Password" 
                 required name='password' 
                 value={password} 
-                onChange={handleInputChange}
+                // onChange={handleInputChange}
                 />
                 <button type='submit' className='--btn --btn-primary --btn-block'>
                     Login
                 </button>
             </form>
 
+            <Link to="/forgot">Forgot Password</Link>
+            <span className={styles.register} >
+                <Link to="/">Home</Link>
+                <p>&nbsp; Don't have an account? &nbsp;</p>
+                <Link to="/register">Register</Link>
+            </span>
             </div>
         </Card>
     </div>

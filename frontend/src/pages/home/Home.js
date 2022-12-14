@@ -15,12 +15,12 @@ export const Home = () => {
             <p>Implement User Registration, Login, Password Reset, Social Login, User Permissions, Email Notifications etc.</p>
             <div className='hero-buttons --flex-start'>
               <button className='--btn --btn-danger'>
-                Register
+                Register 
               </button>
               <button className='--btn --btn-primary'>
                 Login                
               </button>
-            </div>
+            </div>  
           </div>
           <div className='hero-image'>
             <img src={loginImg} alt="x"/>

@@ -3,6 +3,8 @@ import styles from "./auth.module.scss"
 
 export const Login = () => {
   return (
-    <div>Login</div>
+    <div className={`container ${styles.auth}`} >
+        
+    </div>
   )
 }

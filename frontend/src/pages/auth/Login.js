@@ -2,12 +2,13 @@ import React, {useState} from 'react'
 import { BiLogIn } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 import { Card } from '../../components/card/Card'
+import { PasswordInput } from '../../components/passwordInput/PasswordInput'
 import styles from "./auth.module.scss"
 
 export const Login = () => {
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-
 
     const handleInput = () => {
         
@@ -18,7 +19,9 @@ export const Login = () => {
     }
 
   return (
+
     <div className={`container ${styles.auth}`} >
+
         <Card>
             <div className={styles.form}>
 
@@ -31,25 +34,28 @@ export const Login = () => {
                     Login With Google
                 </button>
             </div>
-
+    
             <br/>
             <p className='--text-center --fw-bold'>or</p>
             <form onSubmit={loginUser} >
+
                 <input 
                 type="email" 
                 placeholder="Email" 
                 required name='email' 
                 value={email} 
-                // onChange={handleInputChange}
+                onChange={handleInputChange}
                 />
-                <input 
-                type="password" 
-                placeholder="Password" 
-                required name='password' 
-                value={password} 
-                // onChange={handleInputChange}
+                <PasswordInput
+                placeholder="Password"
+                name="password"
+                value={password}
+                onChange={handleInputChange}
                 />
-                <button type='submit' className='--btn --btn-primary --btn-block'>
+                <button 
+                type='submit'
+                className='--btn --btn-primary --btn-block'
+                >
                     Login
                 </button>
             </form>
@@ -60,8 +66,10 @@ export const Login = () => {
                 <p>&nbsp; Don't have an account? &nbsp;</p>
                 <Link to="/register">Register</Link>
             </span>
-            </div>
+            </div>  
         </Card>
+
     </div>
+
   )
 }

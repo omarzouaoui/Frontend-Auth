@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./Card.module.scss";
+import styles from "./Card.module.scss"
 
 export const Card = ({children, cardClass}) => {
   return (

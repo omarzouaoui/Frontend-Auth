@@ -18,7 +18,7 @@ export const Register    = () => {
 
     const {name, email, password, password2} = formData
 
-    const handleInput = () => {
+    const handleInputChange = (e) => {
         
     }
 

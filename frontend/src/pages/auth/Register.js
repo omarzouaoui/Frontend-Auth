@@ -95,12 +95,39 @@ export const Register    = () => {
                 {/*Password Strength Check*/}
                 <Card cardClass={styles.group}>
                     <ul className='form-list'>
+
                         <li>
                             <span className={styles.indicator}>
-                                {uCase ? checkIcon : timesIcon}
+                                {/* {uCase ? checkIcon : timesIcon} */}
+                                {switchIcon(uCase)}
                                 &nbsp; LowerCase & UpperCase
                             </span>
                         </li>
+
+                        <li>
+                            <span className={styles.indicator}>
+                                {/* {uCase ? checkIcon : timesIcon} */}
+                                {switchIcon(num)}
+                                &nbsp; Number(0-9)
+                            </span>
+                        </li>
+
+                        <li>
+                            <span className={styles.indicator}>
+                                {/* {uCase ? checkIcon : timesIcon} */}
+                                {switchIcon(sChar)}
+                                &nbsp; Special Character(!@#$%^&*)
+                            </span>
+                        </li>
+
+                        <li>
+                            <span className={styles.indicator}>
+                                {/* {uCase ? checkIcon : timesIcon} */}
+                                {switchIcon(passLength)}
+                                &nbsp; At least 6 Character 
+                            </span>
+                        </li>
+
                     </ul>
                 </Card>
 

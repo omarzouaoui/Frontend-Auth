@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
-import { BiLogIn } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 import { Card } from '../../components/card/Card'
 import { PasswordInput } from '../../components/passwordInput/PasswordInput'

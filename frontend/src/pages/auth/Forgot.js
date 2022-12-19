@@ -28,7 +28,7 @@ export const Forgot = () => {
             <div className='--flex-center'>
                 <BiLogIn size={35} color="#999" />
             </div>
-            <h2>Login</h2>
+            <h2>Forgot Password</h2>
             <div className='--flex-center'>
                 <button className='--btn --btn-google'>
                     Login With Google

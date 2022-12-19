@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import { Card } from '../../components/card/Card'
 import { PasswordInput } from '../../components/passwordInput/PasswordInput'
@@ -33,13 +33,39 @@ export const Register    = () => {
             return checkIcon
         }
         return timesIcon
-    }
-
+    }  
 
     const handleInputChange = (e) => {
         const {name, value} = e.target
         setFormData({...formData, [name]: value})
     }
+
+    useEffect(() => {
+        // Check Lower and Uppercase
+        if(password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)){
+            setUCase(true)
+        } else {
+            setUCase(false)
+        }
+        // Check For Numbers
+        if(password.match(/([0-9])/)){
+            setNum(true)
+        } else {
+            setNum(false)
+        }
+        // Check For Special char
+        if(password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)){
+            setSChar(true)
+        } else {
+            setSChar(false)
+        }
+        // Check password length
+        if(password.length>5){
+            setPassLength(true)
+        } else {
+            setPassLength(false)
+        }
+    },[password])
 
     const loginUser = () => {
         
@@ -66,7 +92,7 @@ export const Register    = () => {
                 required 
                 name='name' 
                 value={name} 
-                // onChange={handleInputChange}
+                onChange={handleInputChange}
                 />
 
                 <input 
@@ -75,21 +101,21 @@ export const Register    = () => {
                 required
                 name='email' 
                 value={email} 
-                // onChange={handleInputChange}
+                onChange={handleInputChange}
                 />
 
                 <PasswordInput
                 placeholder="Password"
                 name="password"
                 value={password}
-                // onChange={handleInputChange}
+                onChange={handleInputChange}
                 />
 
                 <PasswordInput
                 placeholder="Confirm Password"
                 name="password2"
                 value={password2}
-                // onChange={handleInputChange}
+                onChange={handleInputChange}
                 />
 
                 {/*Password Strength Check*/}

@@ -81,7 +81,7 @@ export const Profile = () => {
                         </p>
 
                         <p>
-                            <label>Phone :</label>
+                            <label>Bio :</label>
                             <textarea
                             name='bio'
                             value={profile.bio}

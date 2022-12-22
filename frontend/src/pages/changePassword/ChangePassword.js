@@ -3,22 +3,19 @@ import { Card } from '../../components/card/Card'
 import profileImg from "../../assets/avatarr.png"
 import "./ChangePassword.scss"
 import { PageMenu } from '../../components/PageMenu/PageMenu'
+import { PasswordInput } from '../../components/passwordInput/PasswordInput'
 
 const initialState = {
-    name:"Omar",
-    email:"zouaouiomar@gmail.com",
-    phone:"",
-    bio:"",
-    photo:"",   
-    role:"",
-    isVerified:false  
+    oldPassword:"",
+    password:"",
+    password2:"",
 }
 
 export const ChangePassword = () => {
 
-    const [profile, setProfile] = useState(initialState)
+    const [formData, setFormData] = useState(initialState)
+    const { oldPassword, password, password2 }=formData
 
-    const handleImageChange = () =>{}
     const handleInputChange = ()=>{}
 
   return (
@@ -27,66 +24,43 @@ export const ChangePassword = () => {
         <div className='container'>
             <PageMenu/>
            <h2 className='--flex-center'>Change Password</h2>
-           <div className='--flex-center profile'>
+           <div className='--flex-center change-password'>
             <Card cardClass={"card"}>
                 <>
                 
                     <form>
 
                         <p>
-                            <label>Change Photo :</label>
-                            <input 
-                            type="file" 
-                            accept='image/*' 
-                            name='image' 
-                            onChange={handleImageChange} 
-                            />
-                        </p>
-
-                        <p>
-                            <label>Name :</label>
-                            <input 
-                            type="text" 
-                            name='name' 
-                            value={profile.name}
-                            onChange={handleInputChange} 
-                            />
-                        </p>
-
-                        <p>
-                            <label>Email :</label>
-                            <input 
-                            type="email" 
-                            name='email' 
-                            value={profile.email}
-                            onChange={handleInputChange} 
-                            disabled
-                            />
-                        </p>
-
-                        <p>
-                            <label>Phone :</label>
-                            <input 
-                            type="text" 
-                            name='phone' 
-                            value={profile.phone}
-                            onChange={handleInputChange} 
-                            />
-                        </p>
-
-                        <p>
-                            <label>Phone :</label>
-                            <textarea
-                            name='bio'
-                            value={profile.bio}
+                            <label>Current Password :</label>
+                            <PasswordInput
+                            placeholder="Old Password"
+                            name="oldPassword"
+                            value={oldPassword}
                             onChange={handleInputChange}
-                            cols="30"
-                            rows="10"
-                            placeholder='Your bio ...'
                             />
                         </p>
 
-                        <button className='--btn --btn-primary --btn-block'>Update Profile</button>
+                        <p>
+                            <label>New Password :</label>
+                            <PasswordInput
+                            placeholder="New Password"
+                            name="password"
+                            value={password}
+                            onChange={handleInputChange}
+                        />
+                        </p>
+
+                        <p>
+                            <label>Confirm New Password :</label>
+                            <PasswordInput
+                            placeholder="Confirm New Password"
+                            name="password2"
+                            value={password2}
+                            onChange={handleInputChange}
+                        />
+                        </p>
+
+                        <button className='--btn --btn-danger --btn-block'>Change Password</button>
 
                     </form>
 

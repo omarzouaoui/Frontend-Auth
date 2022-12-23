@@ -9,6 +9,7 @@ import { Verify } from "./pages/auth/Verify";
 import { ChangePassword } from "./pages/changePassword/ChangePassword";
 import { Home } from "./pages/home/Home";
 import { Profile } from "./pages/profile/Profile";
+import { UserList } from "./pages/userList/UserList";
 
 function App() {
   return (
@@ -75,6 +76,14 @@ function App() {
       element={ 
         <Layout>
           <ChangePassword/>
+        </Layout>
+      } />
+
+      <Route 
+      path="/users" 
+      element={ 
+        <Layout>
+          <UserList/>
         </Layout>
       } />
   

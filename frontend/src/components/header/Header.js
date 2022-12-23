@@ -18,7 +18,7 @@ export const Header = () => {
     <header className='header'>
         <nav>
             <div className='logo' onClick={goHome} >
-                <BiLogIn size={35} />
+                {/* <BiLogIn size={35} /> */}
                 <span>AUTH:OZ</span>
             </div>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { PageMenu } from '../../components/PageMenu/PageMenu'
+import { Search } from '../../components/search/Search'
 import { UserStats } from '../../components/userStats/UserStats'
 import "./UserList.scss"
 
@@ -13,7 +14,15 @@ export const UserList = () => {
 
             <div className='user-list'>
                 <div className='--flex-between'>
-                    <h3></h3>
+
+                    <span>
+                    <h3>All Users</h3>
+                    </span>
+
+                    <span>
+                        <Search/>
+                    </span>
+
                 </div>
             </div>
 

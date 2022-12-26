@@ -4,8 +4,8 @@ import { FaCheck } from 'react-icons/fa';
 export const ChangeRole = () => {
     const [ userRole, setUserRole ] = useState("");
   return (
-    <div className='sort' >
-        <form className='--flex-start'>
+    <div className="sort" >
+        <form className="--flex-start">
             <select value={userRole} onChange={ (e) => setUserRole(e.target.value) }>
                 <option value="" >--select--</option>
                 <option value="subscriber" >Subscriber</option>
@@ -15,7 +15,7 @@ export const ChangeRole = () => {
             </select>
         </form>
         <button className='--btn --btn-primary'>
-            <FaCheck size={15}/>
+            <FaCheck size={10}/>
         </button>
     </div>
   )

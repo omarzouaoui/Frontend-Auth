@@ -4,6 +4,7 @@ import { Search } from '../../components/search/Search'
 import { UserStats } from '../../components/userStats/UserStats'
 import { FaTrashAlt } from "react-icons/fa"
 import "./UserList.scss"
+import { ChangeRole } from '../../components/changeRole/ChangeRole'
 
 export const UserList = () => {
   return (
@@ -49,6 +50,7 @@ export const UserList = () => {
                         <td>omar@gmail.com</td>
                         <td>Admin</td>
                         <td>Change Role</td>
+                        <td><ChangeRole/></td>
                         <td>
                             <span>
                                 <FaTrashAlt size={20} color="red" />
